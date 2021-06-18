@@ -1,0 +1,203 @@
+.footer {
+    padding: 100px 50px;
+    .container {
+        padding: 100px;
+        flex-direction: row;
+        position: relative;
+        align-items: flex-start;
+        padding-right: 50px;
+        background: rgba(185, 139, 75, 0.67);
+        background-image: url("../img/footer/bg.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: -400px 0;
+
+        @include laptop {
+            padding: 40px;
+        }
+        @include big_tablet {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__menu {
+        flex: 1;
+    }
+
+    &__heading {
+        font-family: $phil;
+        color: #fff;
+        font-size: 36px;
+    }
+
+    &__body {
+        margin-top: 30px;
+    }
+
+    &__nav {
+    }
+
+    &__list {
+    }
+
+    &__li {
+        margin-bottom: 20px;
+    }
+
+    &__link {
+        color: #fff;
+        font-family: $phil;
+        font-size: 24px;
+        &:hover {
+            color: $gold;
+        }
+    }
+
+    &__contacts {
+        flex: 1;
+        @include big_tablet {
+            padding-bottom: 20px;
+            border-bottom: 1px solid #fff;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__address {
+        color: #fff;
+        font-family: $phil;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    &__numbers {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__number {
+        color: #fff;
+        font-family: $phil;
+        font-size: 24px;
+        margin-bottom: 20px;
+        &:hover {
+            color: $gold;
+        }
+    }
+
+    &__logo {
+        flex: 0 1 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @include big_tablet {
+            flex: 0 1 30%;
+        }
+        @include big_tablet {
+            // flex: 0 1 100%;
+            width: 100%;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #fff;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__logo-img {
+        margin-bottom: 60px;
+        img {
+            width: 100%;
+        }
+    }
+
+    &__socilas {
+        display: flex;
+        @include big_tablet {
+            width: 100%;
+            justify-content: flex-start;
+        }
+    }
+
+    &__soc-item {
+        margin-right: 20px;
+        display: block;
+        &:last-child {
+            margin-right: 0;
+        }
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+    .top {
+        position: absolute;
+        top: 50%;
+        right: -20px;
+        transform: translateY(-50%);
+        height: 170px;
+        width: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        animation: arrow 0.5s ease 0s infinite alternate;
+        @include big_tablet {
+            right: 20px;
+            top: unset;
+            bottom: 10%;
+            transform: unset;
+        }
+        &__arrow {
+            height: 100px;
+            width: 2px;
+            background: $gold;
+            position: relative;
+            @include big_tablet {
+                background: #fff;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 8px;
+                height: 2px;
+                background: $gold;
+                transform: rotate(-40deg);
+                @include big_tablet {
+                    background: #fff;
+                }
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 8px;
+                height: 2px;
+                background: $gold;
+                transform: rotate(40deg);
+                @include big_tablet {
+                    background: #fff;
+                }
+            }
+        }
+        &__text {
+            transform: rotate(90deg);
+            white-space: nowrap;
+            color: $gold;
+            font-size: 20px;
+            @include big_tablet {
+                color: #fff;
+            }
+        }
+    }
+}
+
+@keyframes arrow {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(10%);
+    }
+}
