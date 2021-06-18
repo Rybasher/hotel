@@ -5,6 +5,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 10;
     @include big_tablet {
         background: #fff;
         height: 150px;
@@ -310,6 +311,7 @@
             background: transparent;
             margin-right: 20px;
             @include big_tablet {
+                display: none;
                 svg path {
                     stroke: #000;
                 }
@@ -398,9 +400,105 @@
             @include big_tablet {
                 display: none;
             }
-        }
+            .lang-select-wrapper {
+                position: relative;
+                user-select: none;
+                width: 100%;
+            }
+            .lang-select {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                &__trigger {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    // padding: 0 22px;
+                    font-size: 20px;
+                    color: #fff;
+                    cursor: pointer;
+                    margin-bottom: 10px;
+                }
 
-        &__select {
+                &__selected {
+                    color: #ffffff;
+                    font-family: $phil;
+                }
+
+                &__options {
+                    position: absolute;
+                    display: block;
+                    top: 100%;
+                    left: 0;
+                    right: 0;
+                    transition: all 0.5s;
+                    opacity: 0;
+                    visibility: hidden;
+                    pointer-events: none;
+                    z-index: 2;
+                }
+
+                &__option {
+                    position: relative;
+                    display: block;
+                    font-size: 22px;
+                    color: #fff;
+                    cursor: pointer;
+                    transition: all 0.5s;
+                    margin-bottom: 10px;
+                    font-family: $phil;
+                }
+            }
+            .lang-select.open .lang-select__options {
+                opacity: 1;
+                visibility: visible;
+                pointer-events: all;
+            }
+            .arrow {
+                position: relative;
+                height: 15px;
+                width: 15px;
+                margin-left: 20px;
+                &::before,
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0px;
+                    width: 0.15rem;
+                    height: 100%;
+                    transition: all 0.5s;
+                    background-color: #fff;
+                }
+                &::before {
+                    left: -5px;
+                    transform: rotate(-45deg);
+                }
+                &:after {
+                    left: 5px;
+                    transform: rotate(45deg);
+                }
+            }
+
+            .open .arrow::before {
+                left: -5px;
+                transform: rotate(-45deg);
+            }
+            .open .arrow::after {
+                left: 5px;
+                transform: rotate(45deg);
+            }
+        }
+        &__book-link {
+            text-transform: uppercase;
+            font-family: $phil;
+            max-width: 45px;
+            font-size: 12px;
+            color: #000;
+            display: none;
+            @include big_tablet {
+                display: block;
+            }
         }
     }
     .cart {

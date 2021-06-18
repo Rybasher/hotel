@@ -7,3 +7,14 @@ anchor.addEventListener("click", function (e) {
         block: 'start'
     })
 })
+
+let next = document.querySelector(".next-section");
+let next_sec = document.querySelector(".section-currenTime");
+
+next.addEventListener("click", function (e) {
+    e.preventDefault();
+    next_sec.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    })
+})
