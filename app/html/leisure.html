@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <!-- meta, title, css -->
+    @@include('page/head-data.html')
+    <style>
+        .header {
+            background: rgb(126, 126, 126);
+        }
+
+        .menu__burger-icon span {
+            background: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        @@include('blocks/header.html')
+        <div class="modal-video-wrapper">
+            <div class="modal-container">
+                <iframe src="https://www.youtube.com/embed/1uxW-hB-H2Q" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+        <main>
+            <section class="section-leisure section">
+
+                <header class="section-header">
+                    <div class="leisure-buttons-wrapper">
+                        <button class="leisure-button" id="guide">sightseeing guide</button>
+                        <button class="leisure-button" id="museums">museums & theatres</button>
+                        <button class="leisure-button" data-tab="nightlife">nightlife guide</button>
+                    </div>
+                </header>
+
+                <div class="section-body">
+                    <div class="leisure-item" data-tab="guide">
+
+                        <div class="item _usual">
+
+                            <div class="item__header">
+
+                            </div>
+                            <div class="item__body">
+                                <div class="image">
+                                    <img src="../img/leisure/item1/exp.png" alt="exp" class="image__img">
+                                </div>
+                                <div class="info">
+                                    <h3 class="heading">Odessa Museum of Western and Eastern Art</h3>
+                                    <p class="desc">One of the best art museums in Ukraine, the collection of which has
+                                        a
+                                        wide range of works of artistic and cultural value. The museum collection is
+                                        divided
+                                        into three main sections:
+                                    </p>
+                                    <ul class="list">
+                                        <li class="li">
+                                            Department of Western European Art
+                                        </li>
+                                        <li class="li">
+                                            Art of the countries of the Middle and Far East
+                                        </li>
+                                        <li class="li">
+                                            Department of Antique Art
+                                        </li>
+                                    </ul>
+                                    <div class="contacts">
+                                        <div class="contacts__add">
+                                            <img src="../img/leisure/item1/add.png" alt="add" class="contacts__add-img">
+                                        </div>
+                                        <div class="contacts__items">
+                                            <div class="contacts__item">
+                                                <p class="contacts__item-text">ул. Пушкинская, 9</p>
+                                                <img src="../img/leisure/loc.svg" alt="loc" class="contacts__item-img">
+                                            </div>
+                                            <div class="contacts__item">
+                                                <a href="tel:+380487224815" class="contacts__item-text">+38 048 722 48
+                                                    15</a>
+                                                <img src="../img/leisure/loc.svg" alt="loc" class="contacts__item-img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="item heading">
+
+                            <div class="item__header">
+                                <img src="../img/leisure/item2/head.png" alt="head">
+                            </div>
+                            <div class="item__body">
+                                <div class="image">
+                                    <img src="../img/leisure/item1/exp.png" alt="exp" class="image__img">
+                                </div>
+                                <div class="info">
+                                    <h3 class="heading">Odessa Museum of Western and Eastern Art</h3>
+                                    <p class="desc">One of the best art museums in Ukraine, the collection of which has
+                                        a
+                                        wide range of works of artistic and cultural value. The museum collection is
+                                        divided
+                                        into three main sections:
+                                    </p>
+                                    <ul class="list">
+                                        <li class="li">
+                                            Department of Western European Art
+                                        </li>
+                                        <li class="li">
+                                            Art of the countries of the Middle and Far East
+                                        </li>
+                                        <li class="li">
+                                            Department of Antique Art
+                                        </li>
+                                    </ul>
+                                    <div class="contacts">
+                                        <div class="contacts__add">
+                                            <img src="../img/leisure/item1/add.png" alt="add" class="contacts__add-img">
+                                        </div>
+                                        <div class="contacts__items">
+                                            <div class="contacts__item">
+                                                <p class="contacts__item-text">ул. Пушкинская, 9</p>
+                                                <img src="../img/leisure/loc.svg" alt="loc" class="contacts__item-img">
+                                            </div>
+                                            <div class="contacts__item">
+                                                <a href="tel:+380487224815" class="contacts__item-text">+38 048 722 48
+                                                    15</a>
+                                                <img src="../img/leisure/loc.svg" alt="loc" class="contacts__item-img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="item _usual">
+
+                            <div class="item__header">
+
+                            </div>
+                            <div class="item__body">
+                                <div class="image">
+                                    <img src="../img/leisure/item1/exp.png" alt="exp" class="image__img">
+                                </div>
+                                <div class="info">
+                                    <h3 class="heading">Odessa Museum of Western and Eastern Art</h3>
+                                    <p class="desc">One of the best art museums in Ukraine, the collection of which has
+                                        a
+                                        wide range of works of artistic and cultural value. The museum collection is
+                                        divided
+                                        into three main sections:
+                                    </p>
+                                    <ul class="list">
+                                        <li class="li">
+                                            Department of Western European Art
+                                        </li>
+                                        <li class="li">
+                                            Art of the countries of the Middle and Far East
+                                        </li>
+                                        <li class="li">
+                                            Department of Antique Art
+                                        </li>
+                                    </ul>
+                                    <div class="contacts">
+                                        <div class="contacts__add">
+                                            <img src="../img/leisure/item1/add.png" alt="add" class="contacts__add-img">
+                                        </div>
+                                        <div class="contacts__items">
+                                            <div class="contacts__item">
+                                                <p class="contacts__item-text">ул. Пушкинская, 9</p>
+                                                <img src="../img/leisure/loc.svg" alt="loc" class="contacts__item-img">
+                                            </div>
+                                            <div class="contacts__item">
+                                                <a href="tel:+380487224815" class="contacts__item-text">+38 048 722 48
+                                                    15</a>
+                                                <img src="../img/leisure/loc.svg" alt="loc" class="contacts__item-img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="last-item">
+                            <div class="last-item__header">
+                                <div class="last-item__add-image">
+                                    <img src="../img/leisure/item4/add.png" alt="add">
+
+                                </div>
+                                <div class="swiper-container museum-swiper">
+
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="../img/leisure/item4/exp.png" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="../img/leisure/item4/exp.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+
+                                </div>
+                            </div>
+                            <div class="last-item__body">
+                                <div class="contacts">
+                                    <div class="contacts-item">
+                                        <img src="../img/leisure/loc.svg" alt="loc">
+                                        <p class="add-info">ул. Леонтовича, 5</p>
+                                    </div>
+                                    <div class="contacts-item">
+                                        <img src="../img/leisure/loc.svg" alt="loc">
+                                        <a href="tel:+380487591018" class="add-info">+38 048 759 10 18</a>
+                                    </div>
+                                </div>
+                                <div class="info">
+                                    <h3 class="heading">Modern Art Museum of Odessa</h3>
+                                    <p class="desc">The Museum of Odessa Modern Art was created on the 10th of April
+                                        2008 by a young businessman, intellectual and patron of the arts Vadim
+                                        Morokhovsky. It is based on the renowned collector Mikhail Knobel’s unique
+                                        collection of the masters of the second wave of the Odessa avant-garde.
+
+                                    </p>
+                                    <p class="desc">
+                                        This collection has been considerably enlarged and complemented. At present the
+                                        MоOMA exhibits the art of leading painters and sculptors of Odessa of the turn
+                                        of the XXI century.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="leisure-item" data-tab="museums">
+
+                        <div class="item _usual">
+
+                            <div class="item__header">
+
+                            </div>
+                            <div class="item__body">
+                                <div class="image">
+                                    <img src="../img/leisure/item1/exp.png" alt="exp" class="image__img">
+                                </div>
+                                <div class="info">
+                                    <h3 class="heading">Odessa Museum of Western and Eastern Art</h3>
+                                    <p class="desc">One of the best art museums in Ukraine, the collection of which has
+                                        a
+                                        wide range of works of artistic and cultural value. The museum collection is
+                                        divided
+                                        into three main sections:
+                                    </p>
+                                    <ul class="list">
+                                        <li class="li">
+                                            Department of Western European Art
+                                        </li>
+                                        <li class="li">
+                                            Art of the countries of the Middle and Far East
+                                        </li>
+                                        <li class="li">
+                                            Department of Antique Art
+                                        </li>
+                                    </ul>
+                                    <div class="contacts">
+                                        <div class="contacts__add">
+                                            <img src="../img/leisure/item1/add.png" alt="add" class="contacts__add-img">
+                                        </div>
+                                        <div class="contacts__items">
+                                            <div class="contacts__item">
+                                                <p class="contacts__item-text">ул. Пушкинская, 9</p>
+                                                <img src="../img/leisure/loc.svg" alt="loc" class="contacts__item-img">
+                                            </div>
+                                            <div class="contacts__item">
+                                                <a href="tel:+380487224815" class="contacts__item-text">+38 048 722 48
+                                                    15</a>
+                                                <img src="../img/leisure/loc.svg" alt="loc" class="contacts__item-img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="item heading">
+
+                            <div class="item__header">
+                                <img src="../img/leisure/item2/head.png" alt="head">
+                            </div>
+                            <div class="item__body">
+                                <div class="image">
+                                    <img src="../img/leisure/item1/exp.png" alt="exp" class="image__img">
+                                </div>
+                                <div class="info">
+                                    <h3 class="heading">Odessa Museum of Western and Eastern Art</h3>
+                                    <p class="desc">One of the best art museums in Ukraine, the collection of which has
+                                        a
+                                        wide range of works of artistic and cultural value. The museum collection is
+                                        divided
+                                        into three main sections:
+                                    </p>
+                                    <ul class="list">
+                                        <li class="li">
+                                            Department of Western European Art
+                                        </li>
+                                        <li class="li">
+                                            Art of the countries of the Middle and Far East
+                                        </li>
+                                        <li class="li">
+                                            Department of Antique Art
+                                        </li>
+                                    </ul>
+                                    <div class="contacts">
+                                        <div class="contacts__add">
+                                            <img src="../img/leisure/item1/add.png" alt="add" class="contacts__add-img">
+                                        </div>
+                                        <div class="contacts__items">
+                                            <div class="contacts__item">
+                                                <p class="contacts__item-text">ул. Пушкинская, 9</p>
+                                                <img src="../img/leisure/loc.svg" alt="loc" class="contacts__item-img">
+                                            </div>
+                                            <div class="contacts__item">
+                                                <a href="tel:+380487224815" class="contacts__item-text">+38 048 722 48
+                                                    15</a>
+                                                <img src="../img/leisure/loc.svg" alt="loc" class="contacts__item-img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="item _usual">
+
+                            <div class="item__header">
+
+                            </div>
+                            <div class="item__body">
+                                <div class="image">
+                                    <img src="../img/leisure/item1/exp.png" alt="exp" class="image__img">
+                                </div>
+                                <div class="info">
+                                    <h3 class="heading">Odessa Museum of Western and Eastern Art</h3>
+                                    <p class="desc">One of the best art museums in Ukraine, the collection of which has
+                                        a
+                                        wide range of works of artistic and cultural value. The museum collection is
+                                        divided
+                                        into three main sections:
+                                    </p>
+                                    <ul class="list">
+                                        <li class="li">
+                                            Department of Western European Art
+                                        </li>
+                                        <li class="li">
+                                            Art of the countries of the Middle and Far East
+                                        </li>
+                                        <li class="li">
+                                            Department of Antique Art
+                                        </li>
+                                    </ul>
+                                    <div class="contacts">
+                                        <div class="contacts__add">
+                                            <img src="../img/leisure/item1/add.png" alt="add" class="contacts__add-img">
+                                        </div>
+                                        <div class="contacts__items">
+                                            <div class="contacts__item">
+                                                <p class="contacts__item-text">ул. Пушкинская, 9</p>
+                                                <img src="../img/leisure/loc.svg" alt="loc" class="contacts__item-img">
+                                            </div>
+                                            <div class="contacts__item">
+                                                <a href="tel:+380487224815" class="contacts__item-text">+38 048 722 48
+                                                    15</a>
+                                                <img src="../img/leisure/loc.svg" alt="loc" class="contacts__item-img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="last-item">
+                            <div class="last-item__header">
+                                <div class="last-item__add-image">
+                                    <img src="../img/leisure/item4/add.png" alt="add">
+
+                                </div>
+                                <div class="swiper-container museum-swiper">
+
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="../img/leisure/item4/exp.png" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="../img/leisure/item4/exp.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+
+                                </div>
+                            </div>
+                            <div class="last-item__body">
+                                <div class="contacts">
+                                    <div class="contacts-item">
+                                        <img src="../img/leisure/loc.svg" alt="loc">
+                                        <p class="add-info">ул. Леонтовича, 5</p>
+                                    </div>
+                                    <div class="contacts-item">
+                                        <img src="../img/leisure/loc.svg" alt="loc">
+                                        <a href="tel:+380487591018" class="add-info">+38 048 759 10 18</a>
+                                    </div>
+                                </div>
+                                <div class="info">
+                                    <h3 class="heading">Modern Art Museum of Odessa</h3>
+                                    <p class="desc">The Museum of Odessa Modern Art was created on the 10th of April
+                                        2008 by a young businessman, intellectual and patron of the arts Vadim
+                                        Morokhovsky. It is based on the renowned collector Mikhail Knobel’s unique
+                                        collection of the masters of the second wave of the Odessa avant-garde.
+
+                                    </p>
+                                    <p class="desc">
+                                        This collection has been considerably enlarged and complemented. At present the
+                                        MоOMA exhibits the art of leading painters and sculptors of Odessa of the turn
+                                        of the XXI century.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="leisure-item" data-tab="nightlife">
+
+                        <div class="item _usual">
+
+                            <div class="item__header">
+
+                            </div>
+                            <div class="item__body">
+                                <div class="image">
+                                    <img src="../img/leisure/item1/exp.png" alt="exp" class="image__img">
+                                </div>
+                                <div class="info">
+                                    <h3 class="heading">Odessa Museum of Western and Eastern Art</h3>
+                                    <p class="desc">One of the best art museums in Ukraine, the collection of which has
+                                        a
+                                        wide range of works of artistic and cultural value. The museum collection is
+                                        divided
+                                        into three main sections:
+                                    </p>
+                                    <ul class="list">
+                                        <li class="li">
+                                            Department of Western European Art
+                                        </li>
+                                        <li class="li">
+                                            Art of the countries of the Middle and Far East
+                                        </li>
+                                        <li class="li">
+                                            Department of Antique Art
+                                        </li>
+                                    </ul>
+                                    <div class="contacts">
+                                        <div class="contacts__add">
+                                            <img src="../img/leisure/item1/add.png" alt="add" class="contacts__add-img">
+                                        </div>
+                                        <div class="contacts__items">
+                                            <div class="contacts__item">
+                                                <p class="contacts__item-text">ул. Пушкинская, 9</p>
+                                                <img src="../img/leisure/loc.svg" alt="loc" class="contacts__item-img">
+                                            </div>
+                                            <div class="contacts__item">
+                                                <a href="tel:+380487224815" class="contacts__item-text">+38 048 722 48
+                                                    15</a>
+                                                <img src="../img/leisure/loc.svg" alt="loc" class="contacts__item-img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="item heading">
+
+                            <div class="item__header">
+                                <img src="../img/leisure/item2/head.png" alt="head">
+                            </div>
+                            <div class="item__body">
+                                <div class="image">
+                                    <img src="../img/leisure/item1/exp.png" alt="exp" class="image__img">
+                                </div>
+                                <div class="info">
+                                    <h3 class="heading">Odessa Museum of Western and Eastern Art</h3>
+                                    <p class="desc">One of the best art museums in Ukraine, the collection of which has
+                                        a
+                                        wide range of works of artistic and cultural value. The museum collection is
+                                        divided
+                                        into three main sections:
+                                    </p>
+                                    <ul class="list">
+                                        <li class="li">
+                                            Department of Western European Art
+                                        </li>
+                                        <li class="li">
+                                            Art of the countries of the Middle and Far East
+                                        </li>
+                                        <li class="li">
+                                            Department of Antique Art
+                                        </li>
+                                    </ul>
+                                    <div class="contacts">
+                                        <div class="contacts__add">
+                                            <img src="../img/leisure/item1/add.png" alt="add" class="contacts__add-img">
+                                        </div>
+                                        <div class="contacts__items">
+                                            <div class="contacts__item">
+                                                <p class="contacts__item-text">ул. Пушкинская, 9</p>
+                                                <img src="../img/leisure/loc.svg" alt="loc" class="contacts__item-img">
+                                            </div>
+                                            <div class="contacts__item">
+                                                <a href="tel:+380487224815" class="contacts__item-text">+38 048 722 48
+                                                    15</a>
+                                                <img src="../img/leisure/loc.svg" alt="loc" class="contacts__item-img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="item _usual">
+
+                            <div class="item__header">
+
+                            </div>
+                            <div class="item__body">
+                                <div class="image">
+                                    <img src="../img/leisure/item1/exp.png" alt="exp" class="image__img">
+                                </div>
+                                <div class="info">
+                                    <h3 class="heading">Odessa Museum of Western and Eastern Art</h3>
+                                    <p class="desc">One of the best art museums in Ukraine, the collection of which has
+                                        a
+                                        wide range of works of artistic and cultural value. The museum collection is
+                                        divided
+                                        into three main sections:
+                                    </p>
+                                    <ul class="list">
+                                        <li class="li">
+                                            Department of Western European Art
+                                        </li>
+                                        <li class="li">
+                                            Art of the countries of the Middle and Far East
+                                        </li>
+                                        <li class="li">
+                                            Department of Antique Art
+                                        </li>
+                                    </ul>
+                                    <div class="contacts">
+                                        <div class="contacts__add">
+                                            <img src="../img/leisure/item1/add.png" alt="add" class="contacts__add-img">
+                                        </div>
+                                        <div class="contacts__items">
+                                            <div class="contacts__item">
+                                                <p class="contacts__item-text">ул. Пушкинская, 9</p>
+                                                <img src="../img/leisure/loc.svg" alt="loc" class="contacts__item-img">
+                                            </div>
+                                            <div class="contacts__item">
+                                                <a href="tel:+380487224815" class="contacts__item-text">+38 048 722 48
+                                                    15</a>
+                                                <img src="../img/leisure/loc.svg" alt="loc" class="contacts__item-img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="last-item">
+                            <div class="last-item__header">
+                                <div class="last-item__add-image">
+                                    <img src="../img/leisure/item4/add.png" alt="add">
+
+                                </div>
+                                <div class="swiper-container museum-swiper">
+
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="../img/leisure/item4/exp.png" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="../img/leisure/item4/exp.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+
+                                </div>
+                            </div>
+                            <div class="last-item__body">
+                                <div class="contacts">
+                                    <div class="contacts-item">
+                                        <img src="../img/leisure/loc.svg" alt="loc">
+                                        <p class="add-info">ул. Леонтовича, 5</p>
+                                    </div>
+                                    <div class="contacts-item">
+                                        <img src="../img/leisure/loc.svg" alt="loc">
+                                        <a href="tel:+380487591018" class="add-info">+38 048 759 10 18</a>
+                                    </div>
+                                </div>
+                                <div class="info">
+                                    <h3 class="heading">Modern Art Museum of Odessa</h3>
+                                    <p class="desc">The Museum of Odessa Modern Art was created on the 10th of April
+                                        2008 by a young businessman, intellectual and patron of the arts Vadim
+                                        Morokhovsky. It is based on the renowned collector Mikhail Knobel’s unique
+                                        collection of the masters of the second wave of the Odessa avant-garde.
+
+                                    </p>
+                                    <p class="desc">
+                                        This collection has been considerably enlarged and complemented. At present the
+                                        MоOMA exhibits the art of leading painters and sculptors of Odessa of the turn
+                                        of the XXI century.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @@include('blocks/footer.html')
+    </div>
+
+
+
+    <!-- js -->
+    @@include('page/scripts.html')
+
+    <body>

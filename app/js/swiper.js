@@ -62,3 +62,29 @@ const reviews_slider = new Swiper(".reviews-slider", {
     }
 
 })
+
+const hotel = new Swiper(".swiper-hotel", {
+    direction: "horizontal",
+    slidesPerView: 1,
+
+    pagination: {
+        el: '.swiper-pagination',
+    },
+})
+
+const room = new Swiper(".room-image", {
+    direction: "horizontal",
+    slidesPerView: 1,
+
+    pagination: {
+        el: '.swiper-pagination',
+    },
+})
+const mus_swip = new Swiper(".museum-swiper", {
+    direction: "horizontal",
+    slidesPerView: 1,
+
+    pagination: {
+        el: '.swiper-pagination',
+    },
+})

@@ -8,7 +8,14 @@
     position: relative;
     padding: 0;
     overflow: hidden;
+    @include big_tablet {
+        height: 100vh;
+        background-image: unset;
+        background-color: rgb(216, 216, 216);
+    }
     .video {
+        background-color: rgb(216, 216, 216);
+
         position: absolute;
         top: 0;
         left: 0;
@@ -18,6 +25,10 @@
         // width: 100vw;
         // height: 100vh;
         // height: 100%;
+        @include big_tablet {
+            min-height: 70vh;
+            height: 70vh;
+        }
     }
     &::before {
         content: "";
@@ -28,6 +39,9 @@
         left: 0;
         z-index: 1;
         background: rgba(0, 0, 0, 0.534);
+        @include big_tablet {
+            background: unset;
+        }
     }
     .container {
         position: absolute;
@@ -39,6 +53,10 @@
         align-items: center;
         justify-content: space-between;
         padding: 0 30px 40px 30px;
+        @include big_tablet {
+            bottom: 100px;
+            padding: 0 30px 10px 30px;
+        }
     }
     .full-video {
         // padding: 10px 20px;
@@ -47,151 +65,13 @@
         font-family: $phil;
         font-size: 24px;
         width: 204px;
-        height: 50px;
+        min-height: 50px;
         &:hover {
             background: transparent;
             border: thick double #fff;
         }
     }
-    .search-wrapper {
-        width: 100%;
-        .search {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .location-select-wrapper {
-            margin: 0 10px;
-            position: relative;
-            min-width: 200px;
-            @include laptop {
-                min-width: 150px;
-            }
-            .location-header {
-                padding: 10px;
-                border-bottom: 1px solid #fff;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                cursor: pointer;
-                .selected-location {
-                    color: #fff;
-                    margin-right: 20px;
-                    font-size: 24px;
-                    font-family: $phil;
-                }
-                .arrow {
-                    position: relative;
-                    height: 15px;
-                    width: 15px;
-                    transition: transform 0.3s ease 0s;
-                    &::before,
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        bottom: 0px;
-                        width: 1px;
-                        height: 100%;
-                        transition: all 0.5s;
-                        background: #fff;
-                    }
-                    &::before {
-                        left: -5px;
-                        transform: rotate(-45deg);
-                    }
-                    &::after {
-                        left: 5px;
-                        transform: rotate(45deg);
-                    }
-                }
-            }
-            .location-types {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                color: #fff;
-                display: flex;
-                flex-direction: column;
-                padding: 20px 10px;
-                opacity: 0;
-                visibility: hidden;
-                pointer-events: none;
-                transition: all 0.5s ease 0s;
-                width: 100%;
-                label {
-                    margin-bottom: 20px;
-                    display: flex;
-                    flex-direction: column;
-                    min-width: 100%;
-                }
-                .type-wrapper {
-                    width: 100%;
-                    margin-bottom: 10px;
-                    cursor: pointer;
-                    // background: red;
-                    input {
-                        display: none;
-                    }
-                    span {
-                        font-size: 24px;
-                        font-family: $phil;
-                    }
-                    &:hover {
-                        span {
-                            color: $gold;
-                        }
-                    }
-                }
-            }
-        }
-        .location-select-wrapper.open {
-            .arrow {
-                transform: rotate(180deg);
-            }
-            .location-types {
-                opacity: 1;
-                visibility: visible;
-                pointer-events: all;
-            }
-        }
-        .date-field {
-            width: 220px;
-            margin: 0 10px;
-            label {
-                width: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                border-bottom: 1px solid #fff;
 
-                input {
-                    width: 100%;
-                    height: 45px;
-                    background: transparent;
-                    padding: 0 10px;
-                    outline: none;
-                    font-size: 24px;
-                    color: #fff;
-                    font-family: $phil;
-                    &::placeholder {
-                        font-family: $phil;
-                        font-size: 24px;
-                        color: #fff;
-                        opacity: 1;
-                    }
-                }
-            }
-        }
-        button {
-            border: thick double #fff;
-            padding: 8px 20px;
-            background: transparent;
-            color: #fff;
-            font-family: $phil;
-            font-size: 24px;
-        }
-    }
     .next-section {
         margin: 25px 0;
         width: 50px;
@@ -199,6 +79,10 @@
         position: relative;
         animation: arrow 0.5s ease 0s infinite alternate;
         cursor: pointer;
+        @include big_tablet {
+            // margin: 25px 0 10px 0;
+            display: none;
+        }
         &::before,
         &::after {
             content: "";
@@ -207,14 +91,23 @@
             width: 2px;
             height: 100%;
             background: #fff;
+            @include big_tablet {
+                background: #000;
+            }
         }
         &::before {
             left: 6.5px;
             transform: rotate(-45deg);
+            @include big_tablet {
+                left: 7px;
+            }
         }
         &::after {
             right: 6.5px;
             transform: rotate(45deg);
+            @include big_tablet {
+                right: 7px;
+            }
         }
     }
 }
@@ -300,9 +193,8 @@
         }
     }
 }
-
 .section-hotels {
-    padding: 40px 0;
+    padding: 40px 0 0 0;
     display: flex;
     @include big_tablet {
         flex-direction: column;
@@ -394,6 +286,7 @@
     height: 100vh;
     display: flex;
     min-height: 665px;
+    max-height: 900px;
     @include big_tablet {
         flex-direction: column-reverse;
         height: auto;
@@ -550,10 +443,10 @@
         }
     }
 }
-
 .section-room {
     padding: 40px 0;
     background: #635f5b;
+    overflow: hidden;
     &__header {
         padding: 0 30px;
         .container {
@@ -681,8 +574,8 @@
         }
     }
 }
-
 .section-reviews {
+    overflow: hidden;
     .reviews-header {
         &__heading {
             width: 100%;
@@ -741,6 +634,218 @@
             .slider-stars {
                 margin-top: 10px;
             }
+        }
+    }
+}
+
+.section-hosptality {
+    display: flex;
+    padding: 40px 0;
+    justify-content: space-between;
+    padding-left: 30px;
+    overflow: hidden;
+    @include big_tablet {
+        flex-direction: column;
+    }
+    .info {
+        flex: 0 1 50%;
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 50px;
+        @include laptop {
+            flex: 0 1 45%;
+        }
+    }
+    .container {
+        max-width: 700px;
+        margin: unset;
+    }
+    .item {
+        margin-bottom: 100px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &__heading {
+            color: $gold;
+            font-size: 48px;
+            font-family: $corm;
+            line-height: 66px;
+            text-transform: uppercase;
+            max-width: 330px;
+        }
+
+        &__desc {
+            font-size: 22px;
+            padding: 0 30px 0 50px;
+            color: #2e2e2e;
+            font-family: $corm;
+            line-height: 26px;
+            max-width: 543px;
+        }
+
+        &__list {
+            margin-top: 40px;
+            padding-left: 50px;
+        }
+
+        &__li {
+            font-size: 24px;
+            font-family: $phil;
+            color: #2e2e2e;
+            margin-bottom: 25px;
+            &::before {
+                content: "";
+                width: 15px;
+                height: 20px;
+                background-image: url("../img/main/services/rect.svg");
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+                margin-right: 10px;
+                display: inline-block;
+            }
+        }
+    }
+    .images {
+        flex: 0 1 50%;
+        // overflow: hidden;
+        position: relative;
+
+        @include laptop {
+            flex: 0 1 55%;
+        }
+        @include big_tablet {
+            padding-bottom: 100%;
+            flex: 0 1 100%;
+        }
+        @include tablet {
+            padding-bottom: 120%;
+        }
+        @include big_phone {
+            padding-bottom: 380%;
+        }
+
+        &__wrapper {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            @include big_tablet {
+                align-items: center;
+            }
+        }
+        &__row {
+            display: flex;
+            justify-content: flex-end;
+            @include big_phone {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            &:nth-child(2) {
+                position: relative;
+                left: 100px;
+                @include big_tablet {
+                    left: 0%;
+                }
+            }
+        }
+
+        &__img {
+            // width: 100%;
+            height: 300px;
+            margin: 10px;
+            filter: grayscale(1);
+            transition: filter 0.3s ease 0s;
+            @include med_screen {
+                height: 220px;
+            }
+            @include big_tablet {
+                width: 100%;
+                object-fit: contain;
+                filter: grayscale(0);
+            }
+            &:hover {
+                filter: grayscale(0);
+            }
+        }
+    }
+}
+
+.section-locations {
+    display: flex;
+    justify-content: space-between;
+    background-image: url("../img/main/location/bg.png");
+    background-size: cover;
+    background-position: left;
+    padding: 0;
+    .info {
+        padding: 120px 0 120px 30px;
+        flex: 0 1 40%;
+        display: flex;
+        justify-content: flex-end;
+        .container {
+            margin: unset;
+            max-width: 500px;
+        }
+
+        .heading {
+            font-family: $corm;
+            font-size: 48px;
+            letter-spacing: 200%;
+            max-width: 491px;
+            text-transform: uppercase;
+        }
+        .addresses-wrapper {
+            margin-top: 100px;
+        }
+        .address-item {
+            margin-bottom: 30px;
+            color: #4f4f4f;
+            &__heading {
+                font-size: 36px;
+                font-family: $phil;
+                margin-bottom: 20px;
+                text-transform: uppercase;
+            }
+
+            &__number {
+                font-size: 24px;
+                font-family: $phil;
+                color: #4f4f4f;
+                &:hover {
+                    color: $gold;
+                }
+            }
+
+            &__street {
+                font-size: 24px;
+                font-family: $phil;
+                margin-top: 10px;
+            }
+        }
+    }
+
+    .map {
+        flex: 0 1 60%;
+        position: relative;
+    }
+    .dot {
+        width: 30px;
+        height: 30px;
+        background: $gold;
+        position: absolute;
+        border-radius: 100%;
+    }
+    .location {
+        &__img {
+        }
+
+        &__title {
+        }
+
+        &__title-text {
         }
     }
 }

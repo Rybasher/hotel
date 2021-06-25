@@ -10,9 +10,14 @@
 // @import "animate.css";
 // @import "lightgallery.css";
 //подключаем основные стили сайта(блоки)
-
+@import "../../node_modules/lightgallery/scss/lightgallery.scss";
+@import "../../node_modules/lightgallery/scss/lg-zoom.scss";
+@import "../../node_modules/lightgallery/scss/lg-thumbnail.scss";
 @import "../../node_modules/swiper/swiper-bundle";
 
 @import "blocks/header";
+
 @import "blocks/style";
+@import "blocks/leisure.scss";
+@import "blocks/hotel.scss";
 @import "blocks/footer";
