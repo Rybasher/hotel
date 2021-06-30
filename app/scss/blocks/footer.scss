@@ -1,5 +1,8 @@
 .footer {
     padding: 100px 50px;
+    @include phone {
+        padding: 50px 30px;
+    }
     .container {
         padding: 100px;
         flex-direction: row;

@@ -15,9 +15,15 @@
 @import "../../node_modules/lightgallery/scss/lg-thumbnail.scss";
 @import "../../node_modules/swiper/swiper-bundle";
 
-@import "blocks/header";
+// @import "blocks/header";
+@import "blocks/header_white";
 
-@import "blocks/style";
-@import "blocks/leisure.scss";
-@import "blocks/hotel.scss";
+// @import "blocks/style";
+// @import "blocks/leisure.scss";
+// @import "blocks/offer.scss";
+// @import "blocks/hotel.scss";
+// @import "blocks/contacts.scss";
+// @import "blocks/booking.scss";
+@import "blocks/payment.scss";
+
 @import "blocks/footer";

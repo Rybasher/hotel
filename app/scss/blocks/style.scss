@@ -334,6 +334,7 @@
         }
         @include big_tablet {
             width: 100%;
+            justify-content: center;
         }
         &__wrapper {
             max-width: 600px;
@@ -342,6 +343,9 @@
             flex-direction: column;
             align-items: flex-end;
             justify-content: space-between;
+            @include big_tablet {
+                width: unset;
+            }
         }
         &__heading {
             font-size: 48px;
@@ -413,6 +417,9 @@
             @include laptop {
                 font-size: 20px;
             }
+            @include big_phone {
+                font-size: 15px;
+            }
         }
 
         &__link-arrow {
@@ -457,6 +464,9 @@
                 font-size: 48px;
                 max-width: 409.43px;
                 line-height: 67px;
+                @include big_phone {
+                    font-size: 40px;
+                }
             }
         }
     }
@@ -557,6 +567,7 @@
                     color: $gold;
                     font-family: $phil;
                     font-size: 36px;
+                    text-align: center;
                     @include big_phone {
                         font-size: 25px;
                     }
@@ -576,6 +587,7 @@
 }
 .section-reviews {
     overflow: hidden;
+
     .reviews-header {
         &__heading {
             width: 100%;
@@ -591,6 +603,7 @@
     .swiper-container {
         margin-top: 40px;
         overflow: unset;
+        display: flex;
         .swiper-wrapper {
         }
         .swiper-slide {
@@ -646,6 +659,7 @@
     overflow: hidden;
     @include big_tablet {
         flex-direction: column;
+        padding: 40px 30px;
     }
     .info {
         flex: 0 1 50%;
@@ -672,6 +686,9 @@
             line-height: 66px;
             text-transform: uppercase;
             max-width: 330px;
+            @include big_phone {
+                font-size: 40px;
+            }
         }
 
         &__desc {
@@ -681,11 +698,17 @@
             font-family: $corm;
             line-height: 26px;
             max-width: 543px;
+            @include big_phone {
+                padding: 0 10px 0 20px;
+            }
         }
 
         &__list {
             margin-top: 40px;
             padding-left: 50px;
+            @include big_phone {
+                padding-left: 10px;
+            }
         }
 
         &__li {
@@ -693,6 +716,9 @@
             font-family: $phil;
             color: #2e2e2e;
             margin-bottom: 25px;
+            @include big_phone {
+                font-size: 2f0px;
+            }
             &::before {
                 content: "";
                 width: 15px;
@@ -719,10 +745,19 @@
             flex: 0 1 100%;
         }
         @include tablet {
-            padding-bottom: 120%;
+            padding-bottom: 50%;
         }
         @include big_phone {
+            padding-bottom: 330%;
+        }
+        @media (max-width: 480px) {
             padding-bottom: 380%;
+        }
+        @include phone {
+            padding-bottom: 420%;
+        }
+        @media (max-width: 380px) {
+            padding-bottom: 520%;
         }
 
         &__wrapper {
@@ -780,6 +815,7 @@
     background-size: cover;
     background-position: left;
     padding: 0;
+    display: none;
     .info {
         padding: 120px 0 120px 30px;
         flex: 0 1 40%;

@@ -180,6 +180,7 @@
                         width: 100%;
                         align-items: center;
                         justify-content: space-between;
+                        flex-direction: row;
                         @include big_tablet {
                             margin-top: 30px;
                         }

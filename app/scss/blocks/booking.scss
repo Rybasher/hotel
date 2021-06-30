@@ -1,0 +1,874 @@
+.section-booking {
+    padding: 240px 30px 50px 30px;
+    @include big_tablet {
+        padding: 180px 30px 50px 30px;
+    }
+    .container {
+        max-width: 1500px;
+    }
+    .booking-steps {
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include big_phone {
+            flex-direction: column;
+            align-items: center;
+        }
+        button {
+            padding: 10px 20px;
+            background: transparent;
+            color: rgba(0, 0, 0, 0.609);
+            font-family: $corm;
+            font-size: 20px;
+            text-transform: uppercase;
+            pointer-events: none;
+            @include tablet {
+                font-size: 16px;
+            }
+            &.active {
+                color: rgb(0, 0, 0);
+            }
+        }
+        span {
+            height: 1px;
+            background: rgba(0, 0, 0, 0.644);
+            width: 100px;
+            margin: 0 20px;
+            @include big_tablet {
+                width: 5px;
+                height: 5px;
+                background: $gold;
+                border-radius: 100%;
+            }
+            @include tablet {
+                margin: 0 10px;
+            }
+        }
+    }
+    .booking-wrapper {
+        margin-top: 50px;
+        display: flex;
+        @include big_tablet {
+            flex-direction: column-reverse;
+            position: relative;
+            justify-content: flex-start;
+            margin-top: 30px;
+            // display: unset;
+        }
+    }
+    .rooms {
+        flex: 1;
+        .room-search {
+            margin-right: 30px;
+            @include big_tablet {
+                margin-right: 0;
+            }
+            .search-wrapper.hotel {
+                background: #fff;
+                padding: 20px;
+                display: flex;
+                box-shadow: 1px 0px 8px rgba(0, 0, 0, 0.15);
+
+                .search {
+                    @include med_screen {
+                        flex-direction: column;
+                        align-items: flex-start;
+                    }
+                }
+
+                .search__actions {
+                    display: flex;
+                    flex-direction: column;
+                    @include med_screen {
+                        margin-bottom: 30px;
+                    }
+                }
+                .search__actions-row {
+                    display: flex;
+                    align-items: center;
+                    @include med_screen {
+                        flex-wrap: wrap;
+                    }
+                }
+
+                .selected-location {
+                    color: #000;
+                    font-size: 18px;
+                }
+                .location-select-wrapper {
+                    height: 40px;
+                    @media (max-width: 1500px) {
+                        min-width: 160px;
+                    }
+                    @include med_screen {
+                        width: 45%;
+                    }
+                    @include big_tablet {
+                        width: 100%;
+                    }
+                }
+                .leaving-wrapper {
+                    height: 40px;
+                    width: 160px;
+                    label {
+                        height: 100%;
+                    }
+                    .date-input {
+                        font-size: 16px;
+                    }
+                    @include med_screen {
+                        width: 45%;
+                    }
+                    @include big_tablet {
+                        width: 100%;
+                    }
+                }
+                .arriving-wrapper {
+                    height: 40px;
+                    width: 160px;
+
+                    label {
+                        height: 100%;
+                    }
+                    @include med_screen {
+                        width: 45%;
+                    }
+                    @include big_tablet {
+                        width: 100%;
+                    }
+                }
+                .arrow {
+                    &::before,
+                    &::after {
+                        background: #000;
+                    }
+                }
+                button {
+                    color: #000;
+                    border: thick double #000;
+                }
+                .type-wrapper {
+                    color: #000;
+                }
+                .street {
+                    color: #000;
+                }
+                .location-types {
+                    background: #fff;
+                    z-index: 1;
+                }
+                .location-header {
+                    border-bottom: 1px solid #000;
+                }
+                .date-input {
+                    color: #000;
+                    font-size: 18px;
+                }
+                .date-input::placeholder {
+                    color: #000;
+                    font-size: 18px;
+                }
+                .date-field {
+                    label {
+                        border-bottom: 1px solid #000;
+                    }
+                }
+            }
+        }
+        .room-choice {
+            margin-top: 60px;
+            &__item {
+                display: flex;
+                justify-content: space-between;
+                @include big_tablet {
+                    flex-direction: column;
+                }
+            }
+        }
+        .room-image {
+            margin-right: 20px;
+            background: #635f5b;
+            flex: 0 0 400px;
+            @include laptop {
+                flex: 0 0 300px;
+                margin-right: 0px;
+            }
+            &__header {
+                img {
+                    width: 100%;
+                }
+            }
+
+            &__body {
+                padding: 20px;
+            }
+
+            &__title {
+                color: #fff;
+                font-size: 28px;
+                font-family: $phil;
+            }
+
+            &__desc {
+                font-family: $corm;
+                font-size: 22px;
+                color: #fff;
+            }
+
+            &__type {
+                margin-top: 15px;
+                display: flex;
+                align-items: center;
+                color: #fff;
+                font-size: 20px;
+                font-family: $phil;
+                margin-bottom: 10px;
+                img {
+                    margin: 0 15px;
+                }
+                .more {
+                    width: 20px;
+                    height: 20px;
+                    position: relative;
+                    cursor: pointer;
+
+                    span {
+                        position: absolute;
+                        top: 8px;
+                        left: -8px;
+                        transform: rotate(45deg);
+                        width: 100%;
+                        height: 1px;
+                        background: #fff;
+                        &:last-child {
+                            left: unset;
+                            right: -7px;
+                            transform: rotate(-45deg);
+                        }
+                    }
+                }
+            }
+
+            &__more {
+                color: #fff;
+                font-family: $phil;
+                font-size: 18px;
+                text-decoration: underline;
+            }
+        }
+
+        .room-types {
+            padding-right: 20px;
+            margin-left: 10px;
+            flex: 1;
+            @include big_tablet {
+                padding-right: 0;
+                margin-left: 0;
+            }
+            &__type {
+                width: 100%;
+                background: #f5eee4;
+                display: flex;
+                justify-content: space-between;
+                padding: 17px 30px;
+                @media (max-width: 1500px) {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+            }
+
+            &__info {
+                display: flex;
+                flex-direction: column;
+                @media (max-width: 1500px) {
+                    margin-bottom: 20px;
+                }
+            }
+
+            &__info-heading {
+                margin-bottom: 20px;
+                font-family: $phil;
+                font-size: 24px;
+            }
+
+            &__info-list {
+            }
+
+            &__info-li {
+                font-family: $corm;
+                font-size: 18px;
+            }
+
+            &__form {
+                button {
+                    margin-top: 20px;
+                    width: 100%;
+                    color: $gold;
+                    border: thick double $gold;
+                    padding: 10px 20px;
+                    background: transparent;
+                }
+            }
+        }
+        .price {
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            font-family: $phil;
+            &__text {
+                font-size: 24px;
+                margin-left: 10px;
+            }
+        }
+        .personal-information {
+            margin-top: 100px;
+            padding-right: 20px;
+            @include big_tablet {
+                padding-right: 0;
+            }
+            &__form {
+            }
+
+            &__heading {
+                font-family: $corm;
+                color: $gold;
+                text-transform: uppercase;
+                font-size: 32px;
+                margin-bottom: 30px;
+            }
+
+            &__policy {
+            }
+            &__policy-wrapper {
+                padding: 10px 20px;
+            }
+            &__policy-detail {
+                margin-bottom: 20px;
+                display: flex;
+                flex-direction: column;
+            }
+            .inputs {
+                border: 1px solid $gold;
+                padding: 60px 50px;
+                margin-bottom: 65px;
+                input {
+                    border-bottom: 1px solid $gold;
+                    height: 30px;
+                    padding: 10px;
+                    font-family: $corm;
+                    font-size: 26px;
+                    outline: none;
+                    &:focus {
+                        border: 1px solid $gold;
+                    }
+                }
+                &__full-name {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    @include big_tablet {
+                        flex-direction: column;
+                    }
+                }
+
+                &__name {
+                    width: 45%;
+                    @include big_tablet {
+                        width: 100%;
+                        margin-bottom: 40px;
+                    }
+                }
+
+                &__last-name {
+                    width: 45%;
+                    @include big_tablet {
+                        width: 100%;
+                    }
+                }
+
+                &__email {
+                    width: 100%;
+                    margin: 40px 0;
+                }
+
+                &__phone {
+                    width: 100%;
+                }
+
+                &__textarea {
+                    border: 1px solid $gold;
+                    width: 100%;
+                    margin-bottom: 50px;
+                    height: 100px;
+                    padding: 10px 30px;
+                }
+            }
+
+            .check {
+                font-size: 24px;
+                font-family: $corm;
+                color: #2b2b2b;
+            }
+            .check-text {
+                font-size: 20px;
+                font-family: $corm;
+                color: #2b2b2b;
+            }
+        }
+
+        .reciept {
+            margin-top: 100px;
+            &__agree {
+                padding-right: 20px;
+                @include big_tablet {
+                    padding-right: 0;
+                }
+            }
+
+            &__form {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 100px;
+                label {
+                    margin-bottom: 20px;
+                    font-family: $corm;
+                    font-size: 20px;
+                    .company-policy {
+                        color: $gold;
+                        text-decoration: underline;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            &__info {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                @include big_tablet {
+                    flex-direction: column-reverse;
+                    align-items: flex-start;
+                }
+            }
+
+            &__heading {
+                font-weight: 600;
+                font-family: $corm;
+                font-size: 32px;
+                color: $gold;
+                text-transform: uppercase;
+            }
+
+            &__info-text {
+            }
+
+            &__info-list {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                @include big_tablet {
+                    margin-bottom: 20px;
+                    align-items: flex-start;
+                }
+            }
+
+            &__info-li {
+                margin-bottom: 10px;
+            }
+
+            hr {
+                margin: 50px 0;
+                height: 1px;
+                background: $gold;
+            }
+        }
+        .room-items {
+            display: flex;
+            flex-direction: column;
+            &__item {
+                display: flex;
+                @include laptop {
+                    flex-direction: column;
+                }
+            }
+            .room-image {
+                margin-right: 20px;
+                @include big_tablet {
+                    flex: 1;
+                    margin-right: 0;
+                    margin-bottom: 30px;
+                }
+                &__header {
+                }
+
+                &__body {
+                }
+
+                &__title {
+                }
+
+                &__desc {
+                }
+
+                &__type {
+                }
+
+                &__more {
+                }
+            }
+            .more {
+            }
+            .room-info {
+                flex: 1;
+                &__header {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    @include laptop {
+                        flex-direction: column;
+                        align-items: flex-start;
+                    }
+                    @include big_tablet {
+                        flex-direction: row;
+                        align-items: center;
+                    }
+                    @include phone {
+                        flex-direction: column;
+                        align-items: flex-start;
+                    }
+                }
+
+                &__name {
+                }
+
+                &__title {
+                    font-family: $phil;
+                    font-size: 24px;
+                    @include phone {
+                        font-size: 20px;
+                    }
+                }
+
+                &__desc {
+                    font-family: $corm;
+                    font-size: 18px;
+                    @include phone {
+                        font-size: 16px;
+                    }
+                }
+
+                &__price {
+                    font-family: $phil;
+                    font-size: 24px;
+                    @include laptop {
+                        margin-top: 20px;
+                    }
+                }
+
+                &__details {
+                    margin-top: 20px;
+                    hr {
+                        margin: 10px 0;
+                    }
+                }
+
+                &__details-header {
+                }
+
+                &__detail-title {
+                    font-family: $phil;
+                    font-size: 20px;
+                }
+                &__details-date-wrapper {
+                    margin-top: 20px;
+                    display: flex;
+                    justify-content: space-between;
+                }
+                &__details-date-text {
+                    font-family: $corm;
+                    font-size: 18px;
+                }
+                &__details-date-price {
+                    font-family: $phil;
+                    font-size: 18px;
+                }
+                &__details-body {
+                    margin: 15px 0;
+                }
+
+                &__details-row {
+                    display: flex;
+                    margin-bottom: 10px;
+                    @include laptop {
+                        flex-direction: column;
+                        align-items: flex-start;
+                    }
+                    @include big_tablet {
+                        flex-direction: row;
+                    }
+                    @include phone {
+                        flex-direction: column;
+                    }
+                }
+
+                &__details-title {
+                    font-family: $phil;
+                    font-size: 18px;
+                    width: 80px;
+                    margin-right: 20px;
+                }
+
+                &__details-date {
+                    margin-right: 10px;
+                    width: 140px;
+                }
+
+                &__details-time {
+                }
+
+                &__guests {
+                }
+
+                &__guests-detail {
+                    font-family: $phil;
+                    font-size: 20px;
+                    margin-top: 20px;
+                    margin-bottom: 10px;
+                }
+
+                &__guests-ul {
+                }
+
+                &__guests-li {
+                    margin-bottom: 10px;
+                    font-family: $corm;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    .stay {
+        flex: 0 0 430px;
+        padding: 30px 0 0 30px;
+        border-left: 1px solid $gold;
+        align-self: flex-start;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        background: #fff;
+        @include laptop {
+            flex: 0 0 370px;
+            padding: 30px 0 0 15px;
+        }
+        @include big_tablet {
+            flex: unset;
+            width: 100%;
+            border-left: none;
+        }
+        &__heading {
+            font-family: $corm;
+            font-size: 32px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            @include laptop {
+                font-size: 25px;
+            }
+        }
+        &__header {
+            display: flex;
+            justify-content: space-between;
+            @include big_tablet {
+                padding-bottom: 20px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.315);
+            }
+            .stay__details {
+                display: none;
+                border-left: 1px solid #000;
+                padding: 0 20px;
+                @include big_tablet {
+                    display: block;
+                }
+                button {
+                    height: 100%;
+                    background: transparent;
+                    text-transform: uppercase;
+                    font-size: 25px;
+                    font-family: $corm;
+                }
+            }
+        }
+        &__body {
+            @include big_tablet {
+                max-height: 0;
+                overflow: hidden;
+                transition: all 0.3s ease 0s;
+                &.active {
+                    max-height: 100vh;
+                }
+            }
+        }
+        &__details-check {
+            display: flex;
+            margin-bottom: 20px;
+            font-family: $corm;
+            font-size: 25px;
+            @include laptop {
+                font-size: 20px;
+            }
+            .check-in {
+                margin-right: 10px;
+            }
+            .check-out {
+            }
+        }
+
+        &__details-date {
+            display: flex;
+            font-family: $corm;
+            font-size: 25px;
+            @include laptop {
+                font-size: 20px;
+            }
+            .from-date {
+            }
+            .def {
+                margin: 0 10px;
+            }
+            .to-date {
+            }
+        }
+        &__people {
+            font-family: $corm;
+            font-size: 25px;
+            margin-bottom: 20px;
+            @include laptop {
+                font-size: 20px;
+            }
+        }
+
+        &__total {
+            margin-top: 100px;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding-right: 20px;
+            @include big_tablet {
+                margin-top: 40px;
+            }
+        }
+
+        &__total-price-wrapper {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 25px;
+        }
+
+        &__total-price-text {
+            font-size: 28px;
+            font-family: $corm;
+            @include laptop {
+                font-size: 22px;
+            }
+        }
+
+        &__total-price {
+            font-size: 28px;
+            font-family: $phil;
+            @include laptop {
+                font-size: 22px;
+            }
+        }
+
+        &__total-button {
+            padding: 10px 30px;
+            font-family: $phil;
+            font-size: 22px;
+            color: $gold;
+            background: transparent;
+            border: thick double;
+            @include laptop {
+                font-size: 18px;
+            }
+        }
+
+        .room-items {
+            display: flex;
+            flex-direction: column;
+            margin-top: 50px;
+        }
+        .room-item {
+            width: 100%;
+            margin-bottom: 30px;
+            .cancel {
+                width: 20px;
+                height: 20px;
+                position: relative;
+                margin-right: 5px;
+                cursor: pointer;
+                span {
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    height: 1px;
+                    width: 100%;
+                    background: $gold;
+                    transform: rotate(45deg);
+                    &:last-child {
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+            &__wrapper {
+                display: flex;
+                align-items: center;
+                width: 100%;
+            }
+            &__name {
+                font-size: 24px;
+                font-family: $phil;
+                margin-right: 30px;
+                @include laptop {
+                    font-size: 18px;
+                }
+            }
+
+            &__price {
+                font-size: 24px;
+                font-family: $phil;
+                @include laptop {
+                    font-size: 20px;
+                }
+            }
+            &__dop {
+                margin-top: 5px;
+                margin-left: 23px;
+            }
+            &__more-info {
+                width: 20px;
+                height: 20px;
+                position: relative;
+                margin-left: 10px;
+                cursor: pointer;
+                span {
+                    width: 100%;
+                    height: 1px;
+                    background: $gold;
+                    position: absolute;
+                    top: 10px;
+                    left: -6px;
+                    transform: rotate(45deg);
+                    &:last-child {
+                        left: unset;
+                        right: -6px;
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+        }
+    }
+}

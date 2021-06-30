@@ -1,0 +1,334 @@
+@import "../adds/reviews.scss";
+.section-map {
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    min-height: 650px;
+    @include big_tablet {
+        height: auto;
+        flex-direction: column;
+    }
+    .contacts {
+        flex: 0 1 50%;
+        padding-top: 170px;
+        padding-right: 100px;
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        @include laptop {
+            padding-right: 50px;
+        }
+        @include big_tablet {
+            flex: 0 1 100%;
+        }
+        @include tablet {
+            align-items: center;
+            padding: 200px 30px 50px 30px;
+        }
+
+        &__header-heading {
+            font-family: $corm;
+            font-size: 120px;
+            align-self: flex-start;
+            margin-bottom: 50px;
+            display: block;
+            color: rgba(0, 0, 0, 0.2);
+            @include laptop {
+                font-size: 90px;
+            }
+            @include tablet {
+                align-self: center;
+                font-size: 60px;
+            }
+        }
+        &__heading {
+            font-size: 24px;
+            font-family: $phil;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            white-space: nowrap;
+            @include laptop {
+                font-size: 20px;
+            }
+        }
+
+        &__wrapper {
+            display: flex;
+            justify-content: flex-end;
+
+            @include big_tablet {
+                width: 100%;
+            }
+            @include tablet {
+                flex-direction: column;
+                align-items: flex-start;
+                width: 50%;
+            }
+            @include big_phone {
+                width: 100%;
+            }
+        }
+
+        &__booking {
+            margin-right: 30px;
+            display: flex;
+            flex-direction: column;
+            @include big_tablet {
+                margin-bottom: 30px;
+            }
+            @include tablet {
+                margin-right: 0;
+            }
+            @include tablet {
+                width: 100%;
+                align-items: center;
+            }
+        }
+
+        &__email {
+            font-size: 20px;
+            font-family: $corm;
+            color: #000;
+            margin-bottom: 20px;
+            @include laptop {
+                font-size: 16px;
+            }
+        }
+
+        &__numbers {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__number {
+            font-size: 20px;
+            font-family: $corm;
+            color: #000;
+        }
+
+        &__hotels {
+            @include big_tablet {
+                display: flex;
+            }
+            @include tablet {
+                width: 100%;
+                flex-direction: column;
+            }
+        }
+
+        &__hotel {
+            margin-bottom: 30px;
+            @include big_tablet {
+                margin-right: 20px;
+            }
+            @include tablet {
+                margin-right: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        &__address {
+            margin-bottom: 20px;
+            @include laptop {
+                font-size: 15px;
+            }
+        }
+    }
+    .map {
+        flex: 0 1 50%;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.section-reviews-cont {
+    padding: 40px 0;
+    .heading {
+        margin-left: 30px;
+        font-family: $corm;
+        font-size: 120px;
+        align-self: flex-start;
+        margin-bottom: 50px;
+        display: block;
+        color: rgba(0, 0, 0, 0.2);
+        @include laptop {
+            font-size: 90px;
+        }
+        @include tablet {
+            align-self: center;
+            font-size: 60px;
+        }
+    }
+    .reviews__wrapper {
+        display: flex;
+        justify-content: space-between;
+        @include big_tablet {
+            flex-direction: column;
+        }
+        .reviews {
+            flex: 0 1 48%;
+            display: flex;
+            flex-direction: column;
+            @include big_tablet {
+                display: none;
+            }
+            &__item {
+                display: flex;
+                align-items: center;
+                @include med_screen {
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+
+            &__item-body {
+                max-width: 508px;
+                display: flex;
+                align-items: center;
+                box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+                margin-right: 20px;
+                padding: 10px;
+            }
+
+            &__item-image {
+                margin-right: 10px;
+                min-width: 75px;
+                height: 75px;
+                border-radius: 100%;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            &__item-text {
+            }
+
+            &__item-heading {
+                font-size: 24px;
+                font-family: $corm;
+                margin-bottom: 15px;
+            }
+
+            &__item-desc {
+                font-size: 20px;
+                line-height: 24px;
+                color: #6a6a6a;
+                font-family: $corm;
+            }
+        }
+        .hear {
+            flex: 0 1 48%;
+            background: #635f5b;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            padding: 50px 70px;
+            @include big_tablet {
+                flex: 0 1 100%;
+                padding: 50px 30px;
+            }
+            &__heading {
+                font-size: 36px;
+                line-height: 43px;
+                font-family: $corm;
+                text-align: right;
+                max-width: 368.77px;
+                text-transform: uppercase;
+                color: #fff;
+                margin-bottom: 20px;
+            }
+
+            &__desc {
+                font-size: 30px;
+                font-family: $corm;
+                text-align: right;
+                color: #fff;
+            }
+
+            &__form {
+                margin-top: 55px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                width: 70%;
+                @include big_tablet {
+                    width: 100%;
+                }
+            }
+
+            .input-wrapper {
+                width: 100%;
+                height: 40px;
+                position: relative;
+                margin-bottom: 30px;
+            }
+            label {
+                color: #fff;
+                font-family: $corm;
+                font-size: 30px;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 20px;
+                transition: all 0.3s ease 0s;
+                pointer-events: none;
+            }
+            input {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: transparent;
+                padding: 0 15px;
+                border-bottom: 1px solid #fff;
+                color: #fff;
+                font-size: 20px;
+                font-family: $corm;
+            }
+            input:focus ~ label {
+                transform: translateY(-45px);
+                font-size: 20px;
+            }
+            input:valid ~ label {
+                transform: translateY(-45px);
+                font-size: 20px;
+            }
+            button {
+                font-size: 24px;
+                color: #fff;
+                border: thick double #fff;
+                background: transparent;
+                padding: 5px 30px;
+            }
+        }
+    }
+
+    .stars {
+        min-width: 138px;
+        @include med_screen {
+            margin-top: 10px;
+        }
+    }
+    .reviews-slider {
+        display: none;
+        width: 100%;
+        @include big_tablet {
+            display: flex;
+        }
+        .swiper-wrapper {
+            width: 100%;
+            .swiper-slide {
+                width: 100%;
+            }
+        }
+    }
+}
