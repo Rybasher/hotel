@@ -30,6 +30,14 @@
                 @include laptop {
                     font-size: 20px;
                 }
+                @include tablet {
+                    font-size: 15px;
+                    padding: 10px 15px;
+                }
+                @include phone {
+                    font-size: 12px;
+                    padding: 10px;
+                }
             }
         }
     }

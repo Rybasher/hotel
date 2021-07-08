@@ -815,7 +815,6 @@
     background-size: cover;
     background-position: left;
     padding: 0;
-    display: none;
     .info {
         padding: 120px 0 120px 30px;
         flex: 0 1 40%;
@@ -863,25 +862,7 @@
         }
     }
 
-    .map {
+    #map {
         flex: 0 1 60%;
-        position: relative;
-    }
-    .dot {
-        width: 30px;
-        height: 30px;
-        background: $gold;
-        position: absolute;
-        border-radius: 100%;
-    }
-    .location {
-        &__img {
-        }
-
-        &__title {
-        }
-
-        &__title-text {
-        }
     }
 }
